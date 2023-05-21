@@ -45,7 +45,7 @@ import javax.swing.text.BadLocationException;
 @SuppressWarnings("element-type-mismatch")
 public class Calculator {
 	private JFrame frmNumericalAnalysisCalculator;
-        private JLabel lblInput;
+	private JLabel lblInput;
 	private JMenuBar menuBar;
 	private JMenu mnNewMenu;
 	private JMenuItem mntmNewMenuItem_4;
@@ -82,7 +82,7 @@ public class Calculator {
 	private JButton btnNewButton_29;
 	private JButton btnNewButton_30;
 	private JButton btnNewButton_31;
-        private JButton btnNewButton_32;
+	private JButton btnNewButton_32;
 
 	/**
 	 * @param args the command line arguments
@@ -130,18 +130,18 @@ public class Calculator {
 		txtDisplay.setBounds(0, 0, 765, 103);
 		frmNumericalAnalysisCalculator.getContentPane().add(txtDisplay);
 		txtDisplay.setColumns(10);
-                
-                // Create a HashMap
-                Map<String, Boolean> options = new HashMap<>();
 
-                // Add entries to the HashMap
-                options.put("Integration", false);
-                options.put("Find root", false);
-                options.put("Eqn solve 2X2", false);
-                options.put("Eqn solve 3X3", false);
-                options.put("Interpolation", false);
-                options.put("Solve Ordinary Diff. Eqn.", false);
-                options.put("Inverse Interpolation", false);
+		// Create a HashMap
+		Map<String, Boolean> options = new HashMap<>();
+
+		// Add entries to the HashMap
+		options.put("Integration", false);
+		options.put("Find root", false);
+		options.put("Eqn solve 2X2", false);
+		options.put("Eqn solve 3X3", false);
+		options.put("Interpolation", false);
+		options.put("Solve Ordinary Diff. Eqn.", false);
+		options.put("Inverse Interpolation", false);
 		// cos button add
 		btnNewButton = new JButton("cos");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -376,22 +376,20 @@ public class Calculator {
 		btnNewButton_19 = new JButton("Integration");
 		btnNewButton_19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-                      
-				
-                            String message = "lowerlimit upperlimit expression\n";
-                            txtDisplay.setText(message);
-                           
-                             String keyToSet = "Integration";
-                           for (Map.Entry<String, Boolean> entry :options.entrySet()) {
-                               String key = entry.getKey();
-                               if (key.equals(keyToSet)) {
-                                   entry.setValue(true);  // Set the specific value to true
-                               } else {
-                                   entry.setValue(false); // Unset all other values to false
-                               }
-                           }
-                              
-				
+
+				String message = "lowerlimit upperlimit expression\n";
+				txtDisplay.setText(message);
+
+				String keyToSet = "Integration";
+				for (Map.Entry<String, Boolean> entry : options.entrySet()) {
+					String key = entry.getKey();
+					if (key.equals(keyToSet)) {
+						entry.setValue(true); // Set the specific value to true
+					} else {
+						entry.setValue(false); // Unset all other values to false
+					}
+				}
+
 			}
 		});
 		btnNewButton_19.setBounds(490, 428, 110, 52);
@@ -461,19 +459,19 @@ public class Calculator {
 		btnNewButton_25 = new JButton("Find root");
 		btnNewButton_25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				        String message = "expression\n";
-                            txtDisplay.setText(message);
-                           
-                             String keyToSet = "Find root";
-                           for (Map.Entry<String, Boolean> entry :options.entrySet()) {
-                               String key = entry.getKey();
-                               if (key.equals(keyToSet)) {
-                                   entry.setValue(true);  // Set the specific value to true
-                               } else {
-                                   entry.setValue(false); // Unset all other values to false
-                               }
-                           }
-                             
+				String message = "expression\n";
+				txtDisplay.setText(message);
+
+				String keyToSet = "Find root";
+				for (Map.Entry<String, Boolean> entry : options.entrySet()) {
+					String key = entry.getKey();
+					if (key.equals(keyToSet)) {
+						entry.setValue(true); // Set the specific value to true
+					} else {
+						entry.setValue(false); // Unset all other values to false
+					}
+				}
+
 			}
 		});
 		btnNewButton_25.setBounds(35, 508, 100, 52);
@@ -481,19 +479,18 @@ public class Calculator {
 		btnNewButton_26 = new JButton("Eqn solve 2X2");
 		btnNewButton_26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String message = "x1 y1 d1 x2 y2 d2\n";
-                            txtDisplay.setText(message);
-                           
-                             String keyToSet = "Eqn solve 2X2";
-                           for (Map.Entry<String, Boolean> entry :options.entrySet()) {
-                               String key = entry.getKey();
-                               if (key.equals(keyToSet)) {
-                                   entry.setValue(true);  // Set the specific value to true
-                               } else {
-                                   entry.setValue(false); // Unset all other values to false
-                               }
-                           }
-				
+				String message = "x1 y1 d1 x2 y2 d2\n";
+				txtDisplay.setText(message);
+
+				String keyToSet = "Eqn solve 2X2";
+				for (Map.Entry<String, Boolean> entry : options.entrySet()) {
+					String key = entry.getKey();
+					if (key.equals(keyToSet)) {
+						entry.setValue(true); // Set the specific value to true
+					} else {
+						entry.setValue(false); // Unset all other values to false
+					}
+				}
 
 			}
 		});
@@ -503,20 +500,19 @@ public class Calculator {
 		btnNewButton_27 = new JButton("Eqn solve 3X3");
 		btnNewButton_27.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String message = "x1 y1 z1 d1 x2 y2 z2 d2 x3 y3 z3 d3\n";
-                            txtDisplay.setText(message);
-                           
-                             String keyToSet = "Eqn solve 3X3";
-                           for (Map.Entry<String, Boolean> entry :options.entrySet()) {
-                               String key = entry.getKey();
-                               if (key.equals(keyToSet)) {
-                                   entry.setValue(true);  // Set the specific value to true
-                               } else {
-                                   entry.setValue(false); // Unset all other values to false
-                               }
-                           }
+				String message = "x1 y1 z1 d1 x2 y2 z2 d2 x3 y3 z3 d3\n";
+				txtDisplay.setText(message);
 
-				
+				String keyToSet = "Eqn solve 3X3";
+				for (Map.Entry<String, Boolean> entry : options.entrySet()) {
+					String key = entry.getKey();
+					if (key.equals(keyToSet)) {
+						entry.setValue(true); // Set the specific value to true
+					} else {
+						entry.setValue(false); // Unset all other values to false
+					}
+				}
+
 			}
 		});
 		btnNewButton_27.setBounds(330, 508, 130, 52);
@@ -525,19 +521,18 @@ public class Calculator {
 		btnNewButton_28 = new JButton("Interpolation");
 		btnNewButton_28.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String message = "number of entry(1-9)  unknown x (all known x value) (all known y value)\n";
-                            txtDisplay.setText(message);
-                           
-                             String keyToSet = "Interpolation";
-                           for (Map.Entry<String, Boolean> entry :options.entrySet()) {
-                               String key = entry.getKey();
-                               if (key.equals(keyToSet)) {
-                                   entry.setValue(true);  // Set the specific value to true
-                               } else {
-                                   entry.setValue(false); // Unset all other values to false
-                               }
-                           }
-				
+				String message = "number of entry(1-9)  unknown x (all known x value) (all known y value)\n";
+				txtDisplay.setText(message);
+
+				String keyToSet = "Interpolation";
+				for (Map.Entry<String, Boolean> entry : options.entrySet()) {
+					String key = entry.getKey();
+					if (key.equals(keyToSet)) {
+						entry.setValue(true); // Set the specific value to true
+					} else {
+						entry.setValue(false); // Unset all other values to false
+					}
+				}
 
 			}
 		});
@@ -558,19 +553,18 @@ public class Calculator {
 		JButton btnNewButton_32 = new JButton("Solve Ordinary Diff. Eqn.");
 		btnNewButton_32.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String message = "x0 y0 x1 expression\n";
-                            txtDisplay.setText(message);
-                           
-                             String keyToSet = "Solve Ordinary Diff. Eqn.";
-                           for (Map.Entry<String, Boolean> entry :options.entrySet()) {
-                               String key = entry.getKey();
-                               if (key.equals(keyToSet)) {
-                                   entry.setValue(true);  // Set the specific value to true
-                               } else {
-                                   entry.setValue(false); // Unset all other values to false
-                               }
-                           }
+				String message = "x0 y0 x1 expression\n";
+				txtDisplay.setText(message);
 
+				String keyToSet = "Solve Ordinary Diff. Eqn.";
+				for (Map.Entry<String, Boolean> entry : options.entrySet()) {
+					String key = entry.getKey();
+					if (key.equals(keyToSet)) {
+						entry.setValue(true); // Set the specific value to true
+					} else {
+						entry.setValue(false); // Unset all other values to false
+					}
+				}
 
 			}
 		});
@@ -592,631 +586,632 @@ public class Calculator {
 		JButton btnNewButton_31 = new JButton("Inverse Interpolation");
 		btnNewButton_31.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 String message = "number of entry(1-9)  unknown y (all known y value) (all known x value)\n";
-                            txtDisplay.setText(message);
-                           
-                             String keyToSet = "Inverse Interpolation";
-                           for (Map.Entry<String, Boolean> entry :options.entrySet()) {
-                               String key = entry.getKey();
-                               if (key.equals(keyToSet)) {
-                                   entry.setValue(true);  // Set the specific value to true
-                               } else {
-                                   entry.setValue(false); // Unset all other values to false
-                               }
-                           }
+				String message = "number of entry(1-9)  unknown y (all known y value) (all known x value)\n";
+				txtDisplay.setText(message);
+
+				String keyToSet = "Inverse Interpolation";
+				for (Map.Entry<String, Boolean> entry : options.entrySet()) {
+					String key = entry.getKey();
+					if (key.equals(keyToSet)) {
+						entry.setValue(true); // Set the specific value to true
+					} else {
+						entry.setValue(false); // Unset all other values to false
+					}
+				}
 			}
 		});
 		btnNewButton_31.setBounds(315, 588, 150, 52);
 		frmNumericalAnalysisCalculator.getContentPane().add(btnNewButton_31);
-                
-                JButton btnNewButton_33 = new JButton("=");
+
+		JButton btnNewButton_33 = new JButton("=");
 		btnNewButton_33.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String num = null;
 				StringBuilder str = new StringBuilder(txtDisplay.getText());
 				num = str.toString();
-                                 int secondLineOffset = txtDisplay.getText().indexOf('\n');
-                                 num=num.substring(secondLineOffset);
-                                // Check values for specific keys
-                                boolean integrationValue = options.get("Integration");
-                                boolean findRootValue = options.get("Find root");
-                                boolean eqnSolve2X2Value = options.get("Eqn solve 2X2");
-                                boolean eqnSolve3X3Value = options.get("Eqn solve 3X3");
-                                boolean interpolationValue = options.get("Interpolation");
-                                boolean diffEqnValue = options.get("Solve Ordinary Diff. Eqn.");
-                                boolean inverseInterpolationValue = options.get("Inverse Interpolation");
+				int secondLineOffset = txtDisplay.getText().indexOf('\n');
+				num = num.substring(secondLineOffset);
+				// Check values for specific keys
+				boolean integrationValue = options.get("Integration");
+				boolean findRootValue = options.get("Find root");
+				boolean eqnSolve2X2Value = options.get("Eqn solve 2X2");
+				boolean eqnSolve3X3Value = options.get("Eqn solve 3X3");
+				boolean interpolationValue = options.get("Interpolation");
+				boolean diffEqnValue = options.get("Solve Ordinary Diff. Eqn.");
+				boolean inverseInterpolationValue = options.get("Inverse Interpolation");
 
-                                // Perform actions based on the values
-                                if (integrationValue) {
-                                   int cnt = 0;
-				double llimit = 0.0, rlimit = 0.0;
-				String st = " ";
-				int i = 0;
-				while (num.charAt(i) != ' ') {
-					if (st == " ")
-						st = num.substring(i, i + 1);
-					else
-						st += num.charAt(i);
-					i++;
-				}
-				llimit = Double.parseDouble(st);
-				i++;
-				st = " ";
-				while (num.charAt(i) != ' ') {
-					if (st == " ")
-						st = num.substring(i, i + 1);
-					else
-						st += num.charAt(i);
-					i++;
-				}
-				rlimit = Double.parseDouble(st);
-				i++;
-				st = " ";
-
-				for (; i < num.length(); i++)
-					st += num.charAt(i);
-				num = st;
-
-				// System.out.println(llimit+" "+rlimit+" "+num);
-
-				double h = (rlimit - llimit) / 6;
-				double cnt1 = 0;
-				double y0 = 0, y1 = 0, y2 = 0, y3 = 0, y4 = 0, y5 = 0, y6 = 0;
-				// y0
-
-				HashMap<String, Double> vars0 = new HashMap<String, Double>();
-				vars0.put("x", llimit + (h * cnt1));
-				ExpressionBuilder eb0 = new ExpressionBuilder(num);
-				eb0.variables("x");
-				Expression ex0 = eb0.build();
-				ex0.setVariables(vars0);
-				y0 = ex0.evaluate();
-
-				cnt1++;
-
-				// y1
-
-				HashMap<String, Double> vars1 = new HashMap<String, Double>();
-				vars1.put("x", llimit + (h * cnt1));
-				ExpressionBuilder eb1 = new ExpressionBuilder(num);
-				eb1.variables("x");
-				Expression ex1 = eb1.build();
-				ex1.setVariables(vars1);
-				y1 = ex1.evaluate();
-
-				cnt1++;
-
-				// y2
-
-				HashMap<String, Double> vars2 = new HashMap<String, Double>();
-				vars2.put("x", llimit + (h * cnt1));
-				ExpressionBuilder eb2 = new ExpressionBuilder(num);
-				eb2.variables("x");
-				Expression ex2 = eb2.build();
-				ex2.setVariables(vars2);
-				y2 = ex2.evaluate();
-
-				cnt1++;
-
-				// y3
-
-				HashMap<String, Double> vars3 = new HashMap<String, Double>();
-				vars3.put("x", llimit + (h * cnt1));
-				ExpressionBuilder eb3 = new ExpressionBuilder(num);
-				eb3.variables("x");
-				Expression ex3 = eb3.build();
-				ex3.setVariables(vars3);
-				y3 = ex3.evaluate();
-
-				cnt1++;
-
-				// y4
-
-				HashMap<String, Double> vars4 = new HashMap<String, Double>();
-				vars4.put("x", llimit + (h * cnt1));
-				ExpressionBuilder eb4 = new ExpressionBuilder(num);
-				eb4.variables("x");
-				Expression ex4 = eb4.build();
-				ex4.setVariables(vars4);
-				y4 = ex4.evaluate();
-
-				cnt1++;
-
-				// y5
-
-				HashMap<String, Double> vars5 = new HashMap<String, Double>();
-				vars5.put("x", llimit + (h * cnt1));
-				ExpressionBuilder eb5 = new ExpressionBuilder(num);
-				eb5.variables("x");
-				Expression ex5 = eb5.build();
-				ex5.setVariables(vars5);
-				y5 = ex5.evaluate();
-
-				cnt1++;
-
-				// y6
-
-				HashMap<String, Double> vars6 = new HashMap<String, Double>();
-				vars6.put("x", llimit + (h * cnt1));
-				ExpressionBuilder eb6 = new ExpressionBuilder(num);
-				eb6.variables("x");
-				Expression ex6 = eb1.build();
-				ex6.setVariables(vars6);
-				y6 = ex6.evaluate();
-
-				double tt = 3 * h / 10;
-				tt = tt * (y0 + 5 * y1 + y2 + 6 * y3 + y4 + 5 * y5 + y6);
-				num = tt + " ";
-				txtDisplay.setText(num);
-                                }
-
-                                if (findRootValue) {
-                                 double i = 0, j = 0, ll = 0, rr = 0;
-				double result = 0.0, pre = 0;
-				HashMap<String, Double> vars1 = new HashMap<String, Double>();
-				vars1.put("x", 0.0);
-				ExpressionBuilder eb = new ExpressionBuilder(num);
-				eb.variables("x");
-				Expression ex = eb.build();
-				ex.setVariables(vars1);
-				pre = ex.evaluate();
-				int ok = 0;
-				if (pre == 0) {
-					result = 0;
-				} else {
-					while (true) {
+				// Perform actions based on the values
+				if (integrationValue) {
+					int cnt = 0;
+					double llimit = 0.0, rlimit = 0.0;
+					String st = " ";
+					int i = 0;
+					while (num.charAt(i) != ' ') {
+						if (st == " ")
+							st = num.substring(i, i + 1);
+						else
+							st += num.charAt(i);
 						i++;
-						HashMap<String, Double> vars = new HashMap<String, Double>();
-						vars.put("x", i);
-						ExpressionBuilder eb1 = new ExpressionBuilder(num);
-						eb1.variables("x");
-						Expression ex1 = eb1.build();
-						ex1.setVariables(vars);
-						result = ex1.evaluate();
-						if (result == 0) {
-							result = i;
-							ok = 1;
-							break;
-						}
-						if (pre * result < 0) {
-							rr = i;
-							break;
-						}
-						j--;
-						HashMap<String, Double> vars2 = new HashMap<String, Double>();
-						vars2.put("x", j);
-						ExpressionBuilder eb2 = new ExpressionBuilder(num);
-						eb2.variables("x");
-						Expression ex2 = eb2.build();
-						ex2.setVariables(vars2);
-						result = ex2.evaluate();
-						if (result == 0) {
-							result = j;
-							ok = 1;
-							break;
-						}
-						if (pre * result < 0) {
-							rr = j;
-							break;
-						}
-
 					}
-				}
-
-				if (ok == 0) {
-					double l = ll, r = rr;
-					while (Math.abs(l - r) > .00001) {
-						double m = (l + r) / 2;
-
-						double ch = 0;
-						HashMap<String, Double> vars = new HashMap<String, Double>();
-						vars.put("x", m);
-						ExpressionBuilder eb1 = new ExpressionBuilder(num);
-						eb1.variables("x");
-						Expression ex1 = eb1.build();
-						ex1.setVariables(vars);
-						ch = ex1.evaluate();
-						System.out.println(ch);
-
-						if (ch * pre < 0) {
-							r = m;
-							result = ch;
-						} else {
-							l = m;
-							pre = ch;
-						}
-
+					llimit = Double.parseDouble(st);
+					i++;
+					st = " ";
+					while (num.charAt(i) != ' ') {
+						if (st == " ")
+							st = num.substring(i, i + 1);
+						else
+							st += num.charAt(i);
+						i++;
 					}
-					result = l;
-				}
+					rlimit = Double.parseDouble(st);
+					i++;
+					st = " ";
 
-				num = result + "";
-				txtDisplay.setText(num);
-                                }
+					for (; i < num.length(); i++)
+						st += num.charAt(i);
+					num = st;
 
-                                if (eqnSolve2X2Value) {
-                                    String st = num + " ";
-				double score;
-				int indexCheck = 0;
-				double x1 = 0, y1 = 0, d1 = 0, x2 = 0, y2 = 0, d2 = 0;
-				int cnt = 0;
-				double[][] A = new double[2][2];
-				double[] B = new double[2];
-				String subSt;
+					// System.out.println(llimit+" "+rlimit+" "+num);
 
-				for (int i = 0; i < st.length(); i++) {
-					if (st.contains(" ")) {
-						if (st.charAt(i) == ' ') {
-							subSt = st.substring(indexCheck, i);
-							score = Double.parseDouble(subSt);
-							indexCheck = i + 1;
-							if (cnt == 0)
-								x1 = score;
-							else if (cnt == 1)
-								y1 = score;
-							else if (cnt == 2)
-								d1 = score;
-							else if (cnt == 3)
-								x2 = score;
-							else if (cnt == 4)
-								y2 = score;
-							else if (cnt == 5)
-								d2 = score;
-							cnt++;
+					double h = (rlimit - llimit) / 6;
+					double cnt1 = 0;
+					double y0 = 0, y1 = 0, y2 = 0, y3 = 0, y4 = 0, y5 = 0, y6 = 0;
+					// y0
 
-						}
-					}
+					HashMap<String, Double> vars0 = new HashMap<String, Double>();
+					vars0.put("x", llimit + (h * cnt1));
+					ExpressionBuilder eb0 = new ExpressionBuilder(num);
+					eb0.variables("x");
+					Expression ex0 = eb0.build();
+					ex0.setVariables(vars0);
+					y0 = ex0.evaluate();
 
-				}
+					cnt1++;
 
-				A[0][0] = x1;
-				A[0][1] = y1;
-				B[0] = d1;
-				A[1][0] = x2;
-				A[1][1] = y2;
-				B[1] = d2;
+					// y1
 
-				for (int k = 0; k < 2; k++) {
-					/** find pivot row **/
-					int max = k;
-					for (int i = k + 1; i < 2; i++)
-						if (Math.abs(A[i][k]) > Math.abs(A[max][k]))
-							max = i;
-
-					/** swap row in A matrix **/
-					double[] temp = A[k];
-					A[k] = A[max];
-					A[max] = temp;
-
-					/** swap corresponding values in constants matrix **/
-					double t = B[k];
-					B[k] = B[max];
-					B[max] = t;
-
-					/** pivot within A and B **/
-					for (int i = k + 1; i < 2; i++) {
-						double factor = A[i][k] / A[k][k];
-						B[i] -= factor * B[k];
-						for (int j = k; j < 2; j++)
-							A[i][j] -= factor * A[k][j];
-					}
-				}
-				double[] solution = new double[2];
-				for (int i = 1; i >= 0; i--) {
-					double sum = 0.0;
-					for (int j = i + 1; j < 2; j++)
-						sum += A[i][j] * solution[j];
-					solution[i] = (B[i] - sum) / A[i][i];
-				}
-				num = "";
-				for (int i = 0; i < 2; i++)
-					num = num + solution[i] + "  ";
-				txtDisplay.setText(num);
-                                }
-
-                                if (eqnSolve3X3Value) {
-                                   String backspace = null;
-				int xx = num.length();
-				if (num.charAt(xx - 1) == ' ') {
-					StringBuilder str1 = new StringBuilder(txtDisplay.getText());
-					;
-					str1.deleteCharAt(txtDisplay.getText().length() - 1);
-					backspace = str1.toString();
-					num = backspace;
-				}
-
-				String st = num + " ";
-				double score = 0.0;
-				int indexCheck = 0;
-				double x1 = 0, y1 = 0, z1 = 0, d1 = 0, x2 = 0, y2 = 0, z2 = 0, d2 = 0, x3 = 0, y3 = 0, z3 = 0, d3 = 0;
-
-				int cnt = 0;
-
-				String subSt;
-
-				for (int i = 0; i < st.length(); i++) {
-					if (st.contains(" ")) {
-						if (st.charAt(i) == ' ') {
-							subSt = st.substring(indexCheck, i);
-							score = Double.parseDouble(subSt);
-							indexCheck = i + 1;
-							if (cnt == 0)
-								x1 = score;
-							else if (cnt == 1)
-								y1 = score;
-							else if (cnt == 2)
-								z1 = score;
-							else if (cnt == 3)
-								d1 = score;
-							else if (cnt == 4)
-								x2 = score;
-							else if (cnt == 5)
-								y2 = score;
-							else if (cnt == 6)
-								z2 = score;
-							else if (cnt == 7)
-								d2 = score;
-							else if (cnt == 8)
-								x3 = score;
-							else if (cnt == 9)
-								y3 = score;
-							else if (cnt == 10)
-								z3 = score;
-							else if (cnt == 11)
-								d3 = score;
-							cnt++;
-
-						}
-					}
-
-				}
-
-				double[][] A = new double[3][3];
-				double[] B = new double[3];
-				A[0][0] = x1;
-				A[0][1] = y1;
-				A[0][2] = z1;
-				B[0] = d1;
-				A[1][0] = x2;
-				A[1][1] = y2;
-				A[1][2] = z2;
-				B[1] = d2;
-				A[2][0] = x3;
-				A[2][1] = y3;
-				A[2][2] = z3;
-				B[2] = d3;
-
-				for (int k = 0; k < 3; k++) {
-					/** find pivot row **/
-					int max = k;
-					for (int i = k + 1; i < 3; i++)
-						if (Math.abs(A[i][k]) > Math.abs(A[max][k]))
-							max = i;
-
-					/** swap row in A matrix **/
-					double[] temp = A[k];
-					A[k] = A[max];
-					A[max] = temp;
-
-					/** swap corresponding values in constants matrix **/
-					double t = B[k];
-					B[k] = B[max];
-					B[max] = t;
-
-					/** pivot within A and B **/
-					for (int i = k + 1; i < 3; i++) {
-						double factor = A[i][k] / A[k][k];
-						B[i] -= factor * B[k];
-						for (int j = k; j < 3; j++)
-							A[i][j] -= factor * A[k][j];
-					}
-				}
-
-				double[] solution = new double[3];
-				for (int i = 2; i >= 0; i--) {
-					double sum = 0.0;
-					for (int j = i + 1; j < 3; j++)
-						sum += A[i][j] * solution[j];
-					solution[i] = (B[i] - sum) / A[i][i];
-				}
-				num = " ";
-				for (int i = 0; i < 3; i++)
-					num = num + solution[i] + "  ";
-				txtDisplay.setText(num);
-                                }
-
-                                if (interpolationValue) {
-                                    double[] A = new double[10];
-				double[] B = new double[10];
-				int i = 0, j = 0;
-				String ss = num.substring(0, 1);
-
-				int x = Integer.parseInt(ss), indexCheck = 2;
-				i = 2;
-				String st = num + " ", subSt;
-				int cnt = 0;
-				double query = 0.0;
-				// System.out.println(x+" "+st);
-				for (; i < st.length(); i++) {
-					if (st.contains(" ")) {
-						if (st.charAt(i) == ' ') {
-							subSt = st.substring(indexCheck, i);
-							// System.out.println(subSt);
-							double score = Double.parseDouble(subSt);
-							indexCheck = i + 1;
-							if (cnt == 0) {
-								query = score;
-								cnt = 1;
-								continue;
-							}
-							A[j] = score;
-							j++;
-							if (j == x)
-								break;
-
-						}
-					}
-				}
-				j = 0;
-				i++;
-
-				for (; i < st.length(); i++) {
-					if (st.contains(" ")) {
-						if (st.charAt(i) == ' ') {
-							subSt = st.substring(indexCheck, i);
-							// System.out.println(subSt+" "+j);
-							double score = Double.parseDouble(subSt);
-							indexCheck = i + 1;
-							B[j] = score;
-							j++;
-							if (j == x)
-								break;
-
-						}
-					}
-				}
-				double ans = 0.0;
-				for (i = 0; i < x; i++) {
-					double l1 = B[i], r1 = 1.0;
-					for (j = 0; j < x; j++) {
-						if (i == j)
-							continue;
-						l1 = l1 * (query - A[j]);
-						r1 = r1 * (A[i] - A[j]);
-					}
-					ans = (ans + (l1 / r1));
-				}
-
-				num = ans + " ";
-				txtDisplay.setText(num);
-                                }
-
-                                if (diffEqnValue) {
-                                   	String st = num + " ";
-				double score = 0.0;
-				int indexCheck = 0;
-				double x0 = 0.0, y0 = 0.0, x1 = 0.0;
-				String fun = " ";
-				int cnt = 0;
-
-				String subSt;
-
-				for (int i = 0; i < st.length(); i++) {
-					if (st.contains(" ")) {
-						if (st.charAt(i) == ' ') {
-							subSt = st.substring(indexCheck, i);
-							if (cnt <= 2)
-								score = Double.parseDouble(subSt);
-							indexCheck = i + 1;
-							if (cnt == 0)
-								x0 = score;
-							else if (cnt == 1)
-								y0 = score;
-							else if (cnt == 2)
-								x1 = score;
-							else
-								fun = subSt;
-							cnt++;
-
-						}
-					}
-
-				}
-
-				System.out.println(x0 + " " + y0 + " " + x1 + " " + fun);
-
-				double i = 0, j = 0, ll = 0, rr = 0;
-				double result = 0.0, pre = 0;
-
-				Double h = (x1 - x0) / 15;
-				// y1
-				for (int u = 0; u < 15; u++) {
 					HashMap<String, Double> vars1 = new HashMap<String, Double>();
-					vars1.put("x", x0);
-					vars1.put("y", y0);
-					ExpressionBuilder eb = new ExpressionBuilder(fun);
+					vars1.put("x", llimit + (h * cnt1));
+					ExpressionBuilder eb1 = new ExpressionBuilder(num);
+					eb1.variables("x");
+					Expression ex1 = eb1.build();
+					ex1.setVariables(vars1);
+					y1 = ex1.evaluate();
+
+					cnt1++;
+
+					// y2
+
+					HashMap<String, Double> vars2 = new HashMap<String, Double>();
+					vars2.put("x", llimit + (h * cnt1));
+					ExpressionBuilder eb2 = new ExpressionBuilder(num);
+					eb2.variables("x");
+					Expression ex2 = eb2.build();
+					ex2.setVariables(vars2);
+					y2 = ex2.evaluate();
+
+					cnt1++;
+
+					// y3
+
+					HashMap<String, Double> vars3 = new HashMap<String, Double>();
+					vars3.put("x", llimit + (h * cnt1));
+					ExpressionBuilder eb3 = new ExpressionBuilder(num);
+					eb3.variables("x");
+					Expression ex3 = eb3.build();
+					ex3.setVariables(vars3);
+					y3 = ex3.evaluate();
+
+					cnt1++;
+
+					// y4
+
+					HashMap<String, Double> vars4 = new HashMap<String, Double>();
+					vars4.put("x", llimit + (h * cnt1));
+					ExpressionBuilder eb4 = new ExpressionBuilder(num);
+					eb4.variables("x");
+					Expression ex4 = eb4.build();
+					ex4.setVariables(vars4);
+					y4 = ex4.evaluate();
+
+					cnt1++;
+
+					// y5
+
+					HashMap<String, Double> vars5 = new HashMap<String, Double>();
+					vars5.put("x", llimit + (h * cnt1));
+					ExpressionBuilder eb5 = new ExpressionBuilder(num);
+					eb5.variables("x");
+					Expression ex5 = eb5.build();
+					ex5.setVariables(vars5);
+					y5 = ex5.evaluate();
+
+					cnt1++;
+
+					// y6
+
+					HashMap<String, Double> vars6 = new HashMap<String, Double>();
+					vars6.put("x", llimit + (h * cnt1));
+					ExpressionBuilder eb6 = new ExpressionBuilder(num);
+					eb6.variables("x");
+					Expression ex6 = eb1.build();
+					ex6.setVariables(vars6);
+					y6 = ex6.evaluate();
+
+					double tt = 3 * h / 8;
+					tt = tt * (y0 + 3 * y1 + 3 * y2 + 2 * y3 + 3 * y4 + 3 * y5 + y6);
+					num = tt + " ";
+					txtDisplay.setText(num);
+				}
+
+				if (findRootValue) {
+					double i = 0, j = 0, ll = 0, rr = 0;
+					double result = 0.0, pre = 0;
+					HashMap<String, Double> vars1 = new HashMap<String, Double>();
+					vars1.put("x", 0.0);
+					ExpressionBuilder eb = new ExpressionBuilder(num);
 					eb.variables("x");
-					eb.variables("y");
 					Expression ex = eb.build();
 					ex.setVariables(vars1);
 					pre = ex.evaluate();
-
-					y0 = y0 + h * pre;
-					x0 += h;
-
-				}
-
-				// y2
-
-				num = y0 + " ";
-				txtDisplay.setText(num);
-                                }
-
-                                if (inverseInterpolationValue) {
-                                   double[] A = new double[10];
-				double[] B = new double[10];
-				int i = 0, j = 0;
-				String ss = num.substring(0, 1);
-
-				int x = Integer.parseInt(ss), indexCheck = 2;
-				i = 2;
-				String st = num + " ", subSt;
-				int cnt = 0;
-				double query = 0.0;
-				// System.out.println(x+" "+st);
-				for (; i < st.length(); i++) {
-					if (st.contains(" ")) {
-						if (st.charAt(i) == ' ') {
-							subSt = st.substring(indexCheck, i);
-							// System.out.println(subSt);
-							double score = Double.parseDouble(subSt);
-							indexCheck = i + 1;
-							if (cnt == 0) {
-								query = score;
-								cnt = 1;
-								continue;
+					int ok = 0;
+					if (pre == 0) {
+						result = 0;
+					} else {
+						while (true) {
+							i++;
+							HashMap<String, Double> vars = new HashMap<String, Double>();
+							vars.put("x", i);
+							ExpressionBuilder eb1 = new ExpressionBuilder(num);
+							eb1.variables("x");
+							Expression ex1 = eb1.build();
+							ex1.setVariables(vars);
+							result = ex1.evaluate();
+							if (result == 0) {
+								result = i;
+								ok = 1;
+								break;
 							}
-							A[j] = score;
-							j++;
-							if (j == x)
+							if (pre * result < 0) {
+								rr = i;
 								break;
+							}
+							j--;
+							HashMap<String, Double> vars2 = new HashMap<String, Double>();
+							vars2.put("x", j);
+							ExpressionBuilder eb2 = new ExpressionBuilder(num);
+							eb2.variables("x");
+							Expression ex2 = eb2.build();
+							ex2.setVariables(vars2);
+							result = ex2.evaluate();
+							if (result == 0) {
+								result = j;
+								ok = 1;
+								break;
+							}
+							if (pre * result < 0) {
+								rr = j;
+								break;
+							}
 
 						}
 					}
-				}
-				j = 0;
-				i++;
 
-				for (; i < st.length(); i++) {
-					if (st.contains(" ")) {
-						if (st.charAt(i) == ' ') {
-							subSt = st.substring(indexCheck, i);
-							// System.out.println(subSt+" "+j);
-							double score = Double.parseDouble(subSt);
-							indexCheck = i + 1;
-							B[j] = score;
-							j++;
-							if (j == x)
-								break;
+					if (ok == 0) {
+						double l = ll, r = rr;
+						while (Math.abs(l - r) > .00001) {
+							double m = (l + r) / 2;
+
+							double ch = 0;
+							HashMap<String, Double> vars = new HashMap<String, Double>();
+							vars.put("x", m);
+							ExpressionBuilder eb1 = new ExpressionBuilder(num);
+							eb1.variables("x");
+							Expression ex1 = eb1.build();
+							ex1.setVariables(vars);
+							ch = ex1.evaluate();
+							System.out.println(ch);
+
+							if (ch * pre < 0) {
+								r = m;
+								result = ch;
+							} else {
+								l = m;
+								pre = ch;
+							}
 
 						}
+						result = l;
 					}
-				}
-				double ans = 0.0;
-				for (i = 0; i < x; i++) {
-					double l1 = B[i], r1 = 1.0;
-					for (j = 0; j < x; j++) {
-						if (i == j)
-							continue;
-						l1 = l1 * (query - A[j]);
-						r1 = r1 * (A[i] - A[j]);
-					}
-					ans = (ans + (l1 / r1));
+
+					num = result + "";
+					txtDisplay.setText(num);
 				}
 
-				num = ans + " ";
-				txtDisplay.setText(num);
-                                }
+				if (eqnSolve2X2Value) {
+					String st = num + " ";
+					double score;
+					int indexCheck = 0;
+					double x1 = 0, y1 = 0, d1 = 0, x2 = 0, y2 = 0, d2 = 0;
+					int cnt = 0;
+					double[][] A = new double[2][2];
+					double[] B = new double[2];
+					String subSt;
+
+					for (int i = 0; i < st.length(); i++) {
+						if (st.contains(" ")) {
+							if (st.charAt(i) == ' ') {
+								subSt = st.substring(indexCheck, i);
+								score = Double.parseDouble(subSt);
+								indexCheck = i + 1;
+								if (cnt == 0)
+									x1 = score;
+								else if (cnt == 1)
+									y1 = score;
+								else if (cnt == 2)
+									d1 = score;
+								else if (cnt == 3)
+									x2 = score;
+								else if (cnt == 4)
+									y2 = score;
+								else if (cnt == 5)
+									d2 = score;
+								cnt++;
+
+							}
+						}
+
+					}
+
+					A[0][0] = x1;
+					A[0][1] = y1;
+					B[0] = d1;
+					A[1][0] = x2;
+					A[1][1] = y2;
+					B[1] = d2;
+
+					for (int k = 0; k < 2; k++) {
+						/** find pivot row **/
+						int max = k;
+						for (int i = k + 1; i < 2; i++)
+							if (Math.abs(A[i][k]) > Math.abs(A[max][k]))
+								max = i;
+
+						/** swap row in A matrix **/
+						double[] temp = A[k];
+						A[k] = A[max];
+						A[max] = temp;
+
+						/** swap corresponding values in constants matrix **/
+						double t = B[k];
+						B[k] = B[max];
+						B[max] = t;
+
+						/** pivot within A and B **/
+						for (int i = k + 1; i < 2; i++) {
+							double factor = A[i][k] / A[k][k];
+							B[i] -= factor * B[k];
+							for (int j = k; j < 2; j++)
+								A[i][j] -= factor * A[k][j];
+						}
+					}
+					double[] solution = new double[2];
+					for (int i = 1; i >= 0; i--) {
+						double sum = 0.0;
+						for (int j = i + 1; j < 2; j++)
+							sum += A[i][j] * solution[j];
+						solution[i] = (B[i] - sum) / A[i][i];
+					}
+					num = "";
+					for (int i = 0; i < 2; i++)
+						num = num + solution[i] + "  ";
+					txtDisplay.setText(num);
+				}
+
+				if (eqnSolve3X3Value) {
+					String backspace = null;
+					int xx = num.length();
+					if (num.charAt(xx - 1) == ' ') {
+						StringBuilder str1 = new StringBuilder(txtDisplay.getText());
+						;
+						str1.deleteCharAt(txtDisplay.getText().length() - 1);
+						backspace = str1.toString();
+						num = backspace;
+					}
+
+					String st = num + " ";
+					double score = 0.0;
+					int indexCheck = 0;
+					double x1 = 0, y1 = 0, z1 = 0, d1 = 0, x2 = 0, y2 = 0, z2 = 0, d2 = 0, x3 = 0, y3 = 0, z3 = 0,
+							d3 = 0;
+
+					int cnt = 0;
+
+					String subSt;
+
+					for (int i = 0; i < st.length(); i++) {
+						if (st.contains(" ")) {
+							if (st.charAt(i) == ' ') {
+								subSt = st.substring(indexCheck, i);
+								score = Double.parseDouble(subSt);
+								indexCheck = i + 1;
+								if (cnt == 0)
+									x1 = score;
+								else if (cnt == 1)
+									y1 = score;
+								else if (cnt == 2)
+									z1 = score;
+								else if (cnt == 3)
+									d1 = score;
+								else if (cnt == 4)
+									x2 = score;
+								else if (cnt == 5)
+									y2 = score;
+								else if (cnt == 6)
+									z2 = score;
+								else if (cnt == 7)
+									d2 = score;
+								else if (cnt == 8)
+									x3 = score;
+								else if (cnt == 9)
+									y3 = score;
+								else if (cnt == 10)
+									z3 = score;
+								else if (cnt == 11)
+									d3 = score;
+								cnt++;
+
+							}
+						}
+
+					}
+
+					double[][] A = new double[3][3];
+					double[] B = new double[3];
+					A[0][0] = x1;
+					A[0][1] = y1;
+					A[0][2] = z1;
+					B[0] = d1;
+					A[1][0] = x2;
+					A[1][1] = y2;
+					A[1][2] = z2;
+					B[1] = d2;
+					A[2][0] = x3;
+					A[2][1] = y3;
+					A[2][2] = z3;
+					B[2] = d3;
+
+					for (int k = 0; k < 3; k++) {
+						/** find pivot row **/
+						int max = k;
+						for (int i = k + 1; i < 3; i++)
+							if (Math.abs(A[i][k]) > Math.abs(A[max][k]))
+								max = i;
+
+						/** swap row in A matrix **/
+						double[] temp = A[k];
+						A[k] = A[max];
+						A[max] = temp;
+
+						/** swap corresponding values in constants matrix **/
+						double t = B[k];
+						B[k] = B[max];
+						B[max] = t;
+
+						/** pivot within A and B **/
+						for (int i = k + 1; i < 3; i++) {
+							double factor = A[i][k] / A[k][k];
+							B[i] -= factor * B[k];
+							for (int j = k; j < 3; j++)
+								A[i][j] -= factor * A[k][j];
+						}
+					}
+
+					double[] solution = new double[3];
+					for (int i = 2; i >= 0; i--) {
+						double sum = 0.0;
+						for (int j = i + 1; j < 3; j++)
+							sum += A[i][j] * solution[j];
+						solution[i] = (B[i] - sum) / A[i][i];
+					}
+					num = " ";
+					for (int i = 0; i < 3; i++)
+						num = num + solution[i] + "  ";
+					txtDisplay.setText(num);
+				}
+
+				if (interpolationValue) {
+					double[] A = new double[10];
+					double[] B = new double[10];
+					int i = 0, j = 0;
+					String ss = num.substring(0, 1);
+
+					int x = Integer.parseInt(ss), indexCheck = 2;
+					i = 2;
+					String st = num + " ", subSt;
+					int cnt = 0;
+					double query = 0.0;
+					// System.out.println(x+" "+st);
+					for (; i < st.length(); i++) {
+						if (st.contains(" ")) {
+							if (st.charAt(i) == ' ') {
+								subSt = st.substring(indexCheck, i);
+								// System.out.println(subSt);
+								double score = Double.parseDouble(subSt);
+								indexCheck = i + 1;
+								if (cnt == 0) {
+									query = score;
+									cnt = 1;
+									continue;
+								}
+								A[j] = score;
+								j++;
+								if (j == x)
+									break;
+
+							}
+						}
+					}
+					j = 0;
+					i++;
+
+					for (; i < st.length(); i++) {
+						if (st.contains(" ")) {
+							if (st.charAt(i) == ' ') {
+								subSt = st.substring(indexCheck, i);
+								// System.out.println(subSt+" "+j);
+								double score = Double.parseDouble(subSt);
+								indexCheck = i + 1;
+								B[j] = score;
+								j++;
+								if (j == x)
+									break;
+
+							}
+						}
+					}
+					double ans = 0.0;
+					for (i = 0; i < x; i++) {
+						double l1 = B[i], r1 = 1.0;
+						for (j = 0; j < x; j++) {
+							if (i == j)
+								continue;
+							l1 = l1 * (query - A[j]);
+							r1 = r1 * (A[i] - A[j]);
+						}
+						ans = (ans + (l1 / r1));
+					}
+
+					num = ans + " ";
+					txtDisplay.setText(num);
+				}
+
+				if (diffEqnValue) {
+					String st = num + " ";
+					double score = 0.0;
+					int indexCheck = 0;
+					double x0 = 0.0, y0 = 0.0, x1 = 0.0;
+					String fun = " ";
+					int cnt = 0;
+
+					String subSt;
+
+					for (int i = 0; i < st.length(); i++) {
+						if (st.contains(" ")) {
+							if (st.charAt(i) == ' ') {
+								subSt = st.substring(indexCheck, i);
+								if (cnt <= 2)
+									score = Double.parseDouble(subSt);
+								indexCheck = i + 1;
+								if (cnt == 0)
+									x0 = score;
+								else if (cnt == 1)
+									y0 = score;
+								else if (cnt == 2)
+									x1 = score;
+								else
+									fun = subSt;
+								cnt++;
+
+							}
+						}
+
+					}
+
+					System.out.println(x0 + " " + y0 + " " + x1 + " " + fun);
+
+					double i = 0, j = 0, ll = 0, rr = 0;
+					double result = 0.0, pre = 0;
+
+					Double h = (x1 - x0) / 15;
+					// y1
+					for (int u = 0; u < 15; u++) {
+						HashMap<String, Double> vars1 = new HashMap<String, Double>();
+						vars1.put("x", x0);
+						vars1.put("y", y0);
+						ExpressionBuilder eb = new ExpressionBuilder(fun);
+						eb.variables("x");
+						eb.variables("y");
+						Expression ex = eb.build();
+						ex.setVariables(vars1);
+						pre = ex.evaluate();
+
+						y0 = y0 + h * pre;
+						x0 += h;
+
+					}
+
+					// y2
+
+					num = y0 + " ";
+					txtDisplay.setText(num);
+				}
+
+				if (inverseInterpolationValue) {
+					double[] A = new double[10];
+					double[] B = new double[10];
+					int i = 0, j = 0;
+					String ss = num.substring(0, 1);
+
+					int x = Integer.parseInt(ss), indexCheck = 2;
+					i = 2;
+					String st = num + " ", subSt;
+					int cnt = 0;
+					double query = 0.0;
+					// System.out.println(x+" "+st);
+					for (; i < st.length(); i++) {
+						if (st.contains(" ")) {
+							if (st.charAt(i) == ' ') {
+								subSt = st.substring(indexCheck, i);
+								// System.out.println(subSt);
+								double score = Double.parseDouble(subSt);
+								indexCheck = i + 1;
+								if (cnt == 0) {
+									query = score;
+									cnt = 1;
+									continue;
+								}
+								A[j] = score;
+								j++;
+								if (j == x)
+									break;
+
+							}
+						}
+					}
+					j = 0;
+					i++;
+
+					for (; i < st.length(); i++) {
+						if (st.contains(" ")) {
+							if (st.charAt(i) == ' ') {
+								subSt = st.substring(indexCheck, i);
+								// System.out.println(subSt+" "+j);
+								double score = Double.parseDouble(subSt);
+								indexCheck = i + 1;
+								B[j] = score;
+								j++;
+								if (j == x)
+									break;
+
+							}
+						}
+					}
+					double ans = 0.0;
+					for (i = 0; i < x; i++) {
+						double l1 = B[i], r1 = 1.0;
+						for (j = 0; j < x; j++) {
+							if (i == j)
+								continue;
+							l1 = l1 * (query - A[j]);
+							r1 = r1 * (A[i] - A[j]);
+						}
+						ans = (ans + (l1 / r1));
+					}
+
+					num = ans + " ";
+					txtDisplay.setText(num);
+				}
 
 			}
 		});
